@@ -1,0 +1,27 @@
+{
+    "name": "thinframe/foundation",
+    "type": "library",
+    "homepage": "http://thinframe.net",
+    "description": "A collection of classes that make the foundation of all ThinFrame components",
+    "keywords": ["thinframe", "foundation"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sorin Badea",
+            "email": "sorin.badea91@gmail.com",
+            "homepage": "http://sorinbadea.me",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "phpcollection/phpcollection": "dev-master",
+        "psr/log": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    }
+}
