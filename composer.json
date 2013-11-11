@@ -19,6 +19,9 @@
         "phpcollection/phpcollection": "dev-master",
         "psr/log": "dev-master"
     },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
     "autoload": {
         "psr-0": {
             "": "src/"

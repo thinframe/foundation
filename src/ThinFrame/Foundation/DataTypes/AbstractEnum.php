@@ -39,7 +39,6 @@ abstract class AbstractEnum
         } else {
             throw new InvalidArgumentException("Invalid enum value supplied");
         }
-
     }
 
     /**
