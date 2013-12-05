@@ -34,12 +34,23 @@ abstract class AbstractEnum
      */
     final public function __construct($value)
     {
+        $this->setValue($value);
+    }
+
+    /**
+     * Set a new value to the enum instance
+     *
+     * @param $value
+     *
+     * @throws \ThinFrame\Foundation\Exceptions\InvalidArgumentException
+     */
+    final public function setValue($value)
+    {
         if (self::isValid($value)) {
             $this->value = $value;
         } else {
             throw new InvalidArgumentException("Invalid enum value supplied");
         }
-
     }
 
     /**
