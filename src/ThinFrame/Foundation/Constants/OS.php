@@ -17,7 +17,7 @@ use ThinFrame\Foundation\DataTypes\AbstractEnum;
  * @package ThinFrame\Foundation\Constants
  * @since   0.2
  */
-class OS extends AbstractEnum
+final class OS extends AbstractEnum
 {
     const WINDOWS = 'windows';
     const LINUX   = 'linux';

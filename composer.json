@@ -4,6 +4,9 @@
     "homepage": "http://thinframe.net",
     "description": "A collection of classes that make the foundation of all ThinFrame components",
     "keywords": ["thinframe", "foundation"],
+    "support": {
+        "issues": "https://github.com/thinframe/foundation/issues"
+    },
     "license": "MIT",
     "authors": [
         {
@@ -16,12 +19,19 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
-        "phpcollection/phpcollection": "dev-master",
-        "psr/log": "dev-master"
+        "phpcollection/phpcollection": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
     },
     "autoload": {
         "psr-0": {
             "": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.2-dev"
         }
     }
 }

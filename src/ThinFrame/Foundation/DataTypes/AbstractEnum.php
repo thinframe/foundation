@@ -90,6 +90,8 @@ abstract class AbstractEnum
     }
 
     /**
+     * Check if current instance match provided value
+     *
      * @param mixed $value
      *
      * @return bool
