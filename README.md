@@ -2,6 +2,8 @@
 
 Is a collection of classes that make the foundation of all ThinFrame components.
 
+[![Build Status](https://secure.travis-ci.org/thinframe/foundation.png?branch=master)](http://travis-ci.org/thinframe/foundation)
+
 ###Index
 1. TypeHint
 2. AbstractEnum
