@@ -18,7 +18,8 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "phpcollection/phpcollection": "dev-master"
+        "phpcollection/phpcollection": "0.3.*",
+        "danielstjules/stringy": "1.2.*"
     },
     "require-dev": {
         "phpunit/phpunit": "3.7.*"
