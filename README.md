@@ -3,6 +3,9 @@
 Is a collection of classes that make the foundation of all ThinFrame components.
 
 [![Build Status](https://secure.travis-ci.org/thinframe/foundation.png?branch=master)](http://travis-ci.org/thinframe/foundation)
+[![Latest Stable Version](https://poser.pugx.org/thinframe/foundation/v/stable.png)](https://packagist.org/packages/thinframe/foundation)
+[![Latest Unstable Version](https://poser.pugx.org/thinframe/foundation/v/unstable.png)](https://packagist.org/packages/thinframe/foundation)
+[![License](https://poser.pugx.org/thinframe/foundation/license.png)](https://packagist.org/packages/thinframe/foundation)
 
 ##Index
 1. [TypeCheck](#typecheck)
