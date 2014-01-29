@@ -2,6 +2,7 @@
 
 namespace ThinFrame\Foundation\Version;
 
+use Stringy\StaticStringy;
 use ThinFrame\Foundation\Exceptions\InvalidArgumentException;
 
 /**
@@ -38,7 +39,7 @@ class Version implements VersionInterface
      */
     public function __construct($versionString)
     {
-        $this->versionString = $versionString;
+        $this->versionString = trim($versionString);
         $this->parseVersion();
     }
 
@@ -49,6 +50,9 @@ class Version implements VersionInterface
      */
     private function parseVersion()
     {
+        if (StaticStringy::startsWith($this->versionString, 'v')) {
+            $this->versionString = StaticStringy::substr($this->versionString, 1);
+        }
         if (strstr($this->versionString, '-')) {
             if (sscanf(
                     $this->versionString,
