@@ -10,7 +10,6 @@
 namespace ThinFrame\Foundation\Helpers;
 
 use ThinFrame\Foundation\Constants\OS;
-use ThinFrame\Foundation\Constants\VersionType;
 
 /**
  * Class System
@@ -24,50 +23,6 @@ class System
      * @var null|OS
      */
     private static $os = null;
-    /**
-     * @var null|int
-     */
-    private static $phpMajorVersion = null;
-    /**
-     * @var null|int
-     */
-    private static $phpMinorVersion = null;
-    /**
-     * @var null|int
-     */
-    private static $phpReleaseVersion = null;
-
-    /**
-     * Get PHP version
-     *
-     * @param null|string $which - to select a specific part from the version (see VersionType constants)
-     *
-     * @return string
-     *
-     */
-    public static function getPHPVersion($which = null)
-    {
-        TypeCheck::doCheck(OS::type());
-
-        if (is_null(self::$phpMajorVersion)) {
-            $parts                   = explode(".", PHP_VERSION);
-            self::$phpMajorVersion   = $parts[0];
-            self::$phpMinorVersion   = $parts[1];
-            self::$phpReleaseVersion = $parts[2];
-        }
-
-        switch ($which) {
-            case VersionType::MAJOR:
-                return self::$phpMajorVersion;
-            case VersionType::MINOR:
-                return self::$phpMinorVersion;
-            case VersionType::RELEASE:
-                return self::$phpReleaseVersion;
-            default:
-                return PHP_VERSION;
-
-        }
-    }
 
     /**
      * Get terminal width and height
