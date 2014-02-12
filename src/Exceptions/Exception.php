@@ -1,9 +1,9 @@
 <?php
 
 /**
- * /src/ThinFrame/Foundation/Exceptions/Exception.php
+ * src/Exceptions/Exception.php
  *
- * @copyright 2013 Sorin Badea <sorin.badea91@gmail.com>
+ * @author    Sorin Badea <sorin.badea91@gmail.com>
  * @license   MIT license (see the license file in the root directory)
  */
 

@@ -1,9 +1,9 @@
 <?php
 
 /**
- * /src/ThinFrame/Foundation/DataTypes/AbstractEnum.php
+ * src/DataTypes/AbstractEnum.php
  *
- * @copyright 2013 Sorin Badea <sorin.badea91@gmail.com>
+ * @author    Sorin Badea <sorin.badea91@gmail.com>
  * @license   MIT license (see the license file in the root directory)
  */
 
@@ -26,9 +26,9 @@ abstract class AbstractEnum
     private $value;
 
     /**
-     * AbstractEnum()
+     * Constructor
      *
-     * @param $value
+     * @param string|number|bool $value
      *
      * @throws InvalidArgumentException
      */
@@ -73,6 +73,7 @@ abstract class AbstractEnum
     final public static function getMap()
     {
         $reflector = new \ReflectionClass(get_called_class());
+
         return new Map($reflector->getConstants());
     }
 
@@ -84,6 +85,7 @@ abstract class AbstractEnum
     final public static function type()
     {
         $class = get_called_class();
+
         return function ($value) use ($class) {
             return $class::isValid($value);
         };
