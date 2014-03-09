@@ -61,7 +61,7 @@ Enum implementation for PHP. An enumeration is defined using constants and it al
 
 
 ###Installation:
-* via Composer: `"thinframe/foundation":"0.3.0"`
+* via Composer: `"thinframe/foundation":"0.3.*"`
 
 ###Contribuitors
 * Sorin Badea <sorin.badea91@gmail.com>
