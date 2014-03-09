@@ -1,8 +1,6 @@
 <?php
 
 /**
- * src/Helpers/System.php
- *
  * @author    Sorin Badea <sorin.badea91@gmail.com>
  * @license   MIT license (see the license file in the root directory)
  */
@@ -12,7 +10,7 @@ namespace ThinFrame\Foundation\Helper;
 use ThinFrame\Foundation\Constant\OS;
 
 /**
- * Class System
+ * System system helper
  *
  * @package ThinFrame\Foundation\Helpers
  * @since   0.2
@@ -22,7 +20,7 @@ class System
     /**
      * @var null|OS
      */
-    private static $os = null;
+    private static $operatingSystem = null;
 
     /**
      * Get terminal width and height
@@ -31,7 +29,7 @@ class System
      */
     public static function getTerminalSizes()
     {
-        if (self::getOS()->equals(OS::WINDOWS) || self::getOS()->equals(OS::UNKNOWN)) {
+        if (self::getOperatingSystem()->equals(OS::WINDOWS) || self::getOperatingSystem()->equals(OS::UNKNOWN)) {
             return ['width' => 100, 'height' => 100];
         }
         preg_match_all("/rows.([0-9]+);.columns.([0-9]+);/", strtolower(exec('stty -a |grep columns')), $output);
@@ -53,22 +51,22 @@ class System
      *
      * @return OS
      */
-    public static function getOS()
+    public static function getOperatingSystem()
     {
-        if (is_null(self::$os)) {
+        if (is_null(self::$operatingSystem)) {
             $name = strtolower(php_uname());
-            $os   = OS::UNKNOWN;
+            $operatingSystem   = OS::UNKNOWN;
             if (strpos($name, 'darwin') !== false) {
-                $os = OS::DARWIN;
+                $operatingSystem = OS::DARWIN;
             } elseif (strpos($name, 'win') !== false) {
-                $os = OS::WINDOWS;
+                $operatingSystem = OS::WINDOWS;
             } elseif (strpos($name, 'linux') !== false) {
-                $os = OS::LINUX;
+                $operatingSystem = OS::LINUX;
             }
-            self::$os = new OS($os);
+            self::$operatingSystem = new OS($operatingSystem);
         }
 
 
-        return self::$os;
+        return self::$operatingSystem;
     }
 }

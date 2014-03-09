@@ -1,8 +1,6 @@
 <?php
 
 /**
- * src/Version/VersionInterface.php
- *
  * @author    Sorin Badea <sorin.badea91@gmail.com>
  * @license   MIT license (see the license file in the root directory)
  */
@@ -39,11 +37,11 @@ interface VersionInterface
     public function getReleaseVersion();
 
     /**
-     * Get version sufix
+     * Get version suffix
      *
      * @return string
      */
-    public function getSufix();
+    public function getSuffix();
 
     /**
      * Compare with another version

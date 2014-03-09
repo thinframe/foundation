@@ -1,8 +1,6 @@
 <?php
 
 /**
- * src/Version/Version.php
- *
  * @author    Sorin Badea <sorin.badea91@gmail.com>
  * @license   MIT license (see the license file in the root directory)
  */
@@ -39,10 +37,12 @@ class Version implements VersionInterface
     /**
      * @var string
      */
-    protected $sufix = '';
+    protected $suffix = '';
 
     /**
-     * @param string $versionString
+     * Constructor
+     *
+     * @param string $versionString version string
      */
     public function __construct($versionString)
     {
@@ -62,13 +62,13 @@ class Version implements VersionInterface
         }
         if (strstr($this->versionString, '-')) {
             if (sscanf(
-                    $this->versionString,
-                    '%d.%d.%d-%s',
-                    $this->major,
-                    $this->minor,
-                    $this->release,
-                    $this->sufix
-                ) != 4
+                $this->versionString,
+                '%d.%d.%d-%s',
+                $this->major,
+                $this->minor,
+                $this->release,
+                $this->suffix
+            ) != 4
             ) {
                 throw new InvalidArgumentException('Invalid version format ' . $this->versionString);
             }
@@ -110,13 +110,13 @@ class Version implements VersionInterface
     }
 
     /**
-     * Get version sufix
+     * Get version suffix
      *
      * @return string
      */
-    public function getSufix()
+    public function getSuffix()
     {
-        return $this->sufix;
+        return $this->suffix;
     }
 
     /**

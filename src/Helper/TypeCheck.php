@@ -1,8 +1,6 @@
 <?php
 
 /**
- * src/Helpers/TypeCheck.php
- *
  * @author    Sorin Badea <sorin.badea91@gmail.com>
  * @license   MIT license (see the license file in the root directory)
  */
@@ -85,8 +83,8 @@ final class TypeCheck
     /**
      * Check value against the provided type
      *
-     * @param mixed  $value
-     * @param string $type
+     * @param mixed  $value value to be checked
+     * @param string $type  value type
      *
      * @return bool
      */
@@ -104,7 +102,7 @@ final class TypeCheck
     /**
      * Check if provided value is a string
      *
-     * @param mixed $string
+     * @param mixed $string string to be checked
      *
      * @return bool
      */

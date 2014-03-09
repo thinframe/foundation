@@ -1,8 +1,6 @@
 <?php
 
 /**
- * src/Helpers/ShortCodesProcessor.php
- *
  * @author    Sorin Badea <sorin.badea91@gmail.com>
  * @license   MIT license (see the license file in the root directory)
  */
@@ -20,39 +18,47 @@ namespace ThinFrame\Foundation\Helper;
 class ShortCodesProcessor
 {
     /**
-     * @var array
+     * @var array registered shortcodes
      */
     protected $shortCodesTags = array();
 
     /**
      * Register short code
      *
-     * @param string   $tag
-     * @param callable $callback
+     * @param string   $tag      tag name
+     * @param callable $callback callback that will be triggered when tag will be processed
+     *
+     * @return $this
      */
     public function registerShortCode($tag, $callback)
     {
         if (is_callable($callback)) {
             $this->shortCodesTags[$tag] = $callback;
         }
+
+        return $this;
     }
 
     /**
      * Remove short code
      *
-     * @param string $tag
+     * @param string $tag tag to be removed
+     *
+     * @return $this
      */
     public function removeShortCode($tag)
     {
         if (isset($this->shortCodesTags[$tag])) {
             unset($this->shortCodesTags[$tag]);
         }
+
+        return $this;
     }
 
     /**
      * Parse content
      *
-     * @param string $content
+     * @param string $content content to be parsed
      *
      * @return string
      */
@@ -81,14 +87,14 @@ class ShortCodesProcessor
     protected function generateShortCodesRegex()
     {
         $tags                  = array_keys($this->shortCodesTags);
-        $tagsRegularExpression = join('|', array_map('preg_quote', $tags));
+        $regularExpression = join('|', array_map('preg_quote', $tags));
 
         // WARNING! Do not change this regex without changing do_shortcode_tag() and strip_shortcode_tag()
         // Also, see shortcode_unautop() and shortcode.js.
         return
             '\\[' // Opening bracket
             . '(\\[?)' // 1: Optional second opening bracket for escaping shortcodes: [[tag]]
-            . "($tagsRegularExpression)" // 2: Shortcode name
+            . "($regularExpression)" // 2: Shortcode name
             . '(?![\\w-])' // Not followed by word character or hyphen
             . '(' // 3: Unroll the loop: Inside the opening shortcode tag
             . '[^\\]\\/]*' // Not a closing bracket or forward slash
@@ -157,14 +163,16 @@ class ShortCodesProcessor
     /**
      * Parse short code attributes
      *
-     * @param string $text
+     * @param string $text short code attributes
      *
      * @return array|string
      */
     protected function parseShortCodeAttributes($text)
     {
         $attributes = array();
-        $pattern    = '/(\w+)\s*=\s*"([^"]*)"(?:\s|$)|(\w+)\s*=\s*\'([^\']*)\'(?:\s|$)|(\w+)\s*=\s*([^\s\'"]+)(?:\s|$)|"([^"]*)"(?:\s|$)|(\S+)(?:\s|$)/';
+        $pattern    =
+            '/(\w+)\s*=\s*"([^"]*)"(?:\s|$)|(\w+)\s*=\s*\'([^\']*)\'(?:\s' .
+            '|$)|(\w+)\s*=\s*([^\s\'"]+)(?:\s|$)|"([^"]*)"(?:\s|$)|(\S+)(?:\s|$)/';
         $text       = preg_replace("/[\x{00a0}\x{200b}]+/u", " ", $text);
         if (preg_match_all($pattern, $text, $matches, PREG_SET_ORDER)) {
             foreach ($matches as $match) {

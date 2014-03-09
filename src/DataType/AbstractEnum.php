@@ -1,8 +1,6 @@
 <?php
 
 /**
- * src/DataTypes/AbstractEnum.php
- *
  * @author    Sorin Badea <sorin.badea91@gmail.com>
  * @license   MIT license (see the license file in the root directory)
  */
@@ -13,7 +11,7 @@ use PhpCollection\Map;
 use ThinFrame\Foundation\Exception\InvalidArgumentException;
 
 /**
- * Class AbstractEnum
+ * AbstractEnum - emulates the functionality of an enum
  *
  * @package ThinFrame\Foundation\DataTypes
  * @since   0.2
@@ -28,9 +26,9 @@ abstract class AbstractEnum
     /**
      * Constructor
      *
-     * @param string|number|bool $value
+     * @param string|number|bool $value value of the enum
      *
-     * @throws InvalidArgumentException
+     * @throws InvalidArgumentException in case of invalid enum value
      */
     final public function __construct($value)
     {
@@ -40,9 +38,9 @@ abstract class AbstractEnum
     /**
      * Set a new value to the enum instance
      *
-     * @param $value
+     * @param string $value enum value
      *
-     * @throws \ThinFrame\Foundation\Exception\InvalidArgumentException
+     * @throws InvalidArgumentException in case of invalid enum value
      */
     final public function setValue($value)
     {
@@ -56,7 +54,7 @@ abstract class AbstractEnum
     /**
      * Check if provided value is a valid constant value
      *
-     * @param $value
+     * @param string $value value to be checked
      *
      * @return bool
      */
@@ -94,7 +92,7 @@ abstract class AbstractEnum
     /**
      * Check if current instance match provided value
      *
-     * @param mixed $value
+     * @param mixed $value value to compare against
      *
      * @return bool
      */
