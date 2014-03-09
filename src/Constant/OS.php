@@ -7,9 +7,9 @@
  * @license   MIT license (see the license file in the root directory)
  */
 
-namespace ThinFrame\Foundation\Constants;
+namespace ThinFrame\Foundation\Constant;
 
-use ThinFrame\Foundation\DataTypes\AbstractEnum;
+use ThinFrame\Foundation\DataType\AbstractEnum;
 
 /**
  * Class OS

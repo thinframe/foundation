@@ -7,7 +7,7 @@
  * @license   MIT license (see the license file in the root directory)
  */
 
-namespace ThinFrame\Foundation\Helpers;
+namespace ThinFrame\Foundation\Helper;
 
 /**
  * ShortCodesProcessor - shortcodes processor

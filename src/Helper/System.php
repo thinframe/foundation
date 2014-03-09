@@ -7,9 +7,9 @@
  * @license   MIT license (see the license file in the root directory)
  */
 
-namespace ThinFrame\Foundation\Helpers;
+namespace ThinFrame\Foundation\Helper;
 
-use ThinFrame\Foundation\Constants\OS;
+use ThinFrame\Foundation\Constant\OS;
 
 /**
  * Class System

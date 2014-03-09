@@ -7,13 +7,13 @@
  * @license   MIT license (see the license file in the root directory)
  */
 
-namespace ThinFrame\Foundation\Tests;
+namespace ThinFrame\Foundation\Test;
 
-use ThinFrame\Foundation\Exceptions\Exception;
-use ThinFrame\Foundation\Exceptions\ExceptionInterface;
-use ThinFrame\Foundation\Exceptions\InvalidArgumentException;
-use ThinFrame\Foundation\Exceptions\LogicException;
-use ThinFrame\Foundation\Exceptions\RuntimeException;
+use ThinFrame\Foundation\Exception\Exception;
+use ThinFrame\Foundation\Exception\ExceptionInterface;
+use ThinFrame\Foundation\Exception\InvalidArgumentException;
+use ThinFrame\Foundation\Exception\LogicException;
+use ThinFrame\Foundation\Exception\RuntimeException;
 
 /**
  * Class ExceptionsTest

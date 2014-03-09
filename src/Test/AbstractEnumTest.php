@@ -7,10 +7,10 @@
  * @license   MIT license (see the license file in the root directory)
  */
 
-namespace ThinFrame\Foundation\Tests;
+namespace ThinFrame\Foundation\Test;
 
-use ThinFrame\Foundation\Exceptions\InvalidArgumentException;
-use ThinFrame\Foundation\Tests\Samples\DummyEnum;
+use ThinFrame\Foundation\Exception\InvalidArgumentException;
+use ThinFrame\Foundation\Test\Sample\DummyEnum;
 
 /**
  * Class AbstractEnumTest

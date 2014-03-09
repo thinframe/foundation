@@ -7,10 +7,10 @@
  * @license   MIT license (see the license file in the root directory)
  */
 
-namespace ThinFrame\Foundation\Helpers;
+namespace ThinFrame\Foundation\Helper;
 
-use ThinFrame\Foundation\Constants\DataType;
-use ThinFrame\Foundation\Exceptions\InvalidArgumentException;
+use ThinFrame\Foundation\Constant\DataType;
+use ThinFrame\Foundation\Exception\InvalidArgumentException;
 
 /**
  * Class TypeCheck
@@ -33,7 +33,7 @@ final class TypeCheck
         DataType::FLOAT    => 'is_float',
         DataType::RESOURCE => 'is_resource',
         DataType::DOUBLE   => 'is_double',
-        DataType::STRING   => 'ThinFrame\Foundation\Helpers\TypeCheck::isString'
+        DataType::STRING   => 'ThinFrame\Foundation\Helper\TypeCheck::isString'
     ];
 
     /**

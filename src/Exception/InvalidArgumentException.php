@@ -7,7 +7,7 @@
  * @license   MIT license (see the license file in the root directory)
  */
 
-namespace ThinFrame\Foundation\Exceptions;
+namespace ThinFrame\Foundation\Exception;
 
 /**
  * Class InvalidArgumentException

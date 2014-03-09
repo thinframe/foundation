@@ -7,10 +7,10 @@
  * @license   MIT license (see the license file in the root directory)
  */
 
-namespace ThinFrame\Foundation\DataTypes;
+namespace ThinFrame\Foundation\DataType;
 
 use PhpCollection\Map;
-use ThinFrame\Foundation\Exceptions\InvalidArgumentException;
+use ThinFrame\Foundation\Exception\InvalidArgumentException;
 
 /**
  * Class AbstractEnum
@@ -42,7 +42,7 @@ abstract class AbstractEnum
      *
      * @param $value
      *
-     * @throws \ThinFrame\Foundation\Exceptions\InvalidArgumentException
+     * @throws \ThinFrame\Foundation\Exception\InvalidArgumentException
      */
     final public function setValue($value)
     {

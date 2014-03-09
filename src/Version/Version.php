@@ -10,7 +10,7 @@
 namespace ThinFrame\Foundation\Version;
 
 use Stringy\StaticStringy;
-use ThinFrame\Foundation\Exceptions\InvalidArgumentException;
+use ThinFrame\Foundation\Exception\InvalidArgumentException;
 
 /**
  * Class Version
@@ -53,7 +53,7 @@ class Version implements VersionInterface
     /**
      * Parse version string
      *
-     * @throws \ThinFrame\Foundation\Exceptions\InvalidArgumentException
+     * @throws \ThinFrame\Foundation\Exception\InvalidArgumentException
      */
     private function parseVersion()
     {
