@@ -1,16 +1,14 @@
 <?php
 
 /**
- * /src/ThinFrame/Foundation/Helpers/TypeCheck.php
- *
- * @copyright 2013 Sorin Badea <sorin.badea91@gmail.com>
+ * @author    Sorin Badea <sorin.badea91@gmail.com>
  * @license   MIT license (see the license file in the root directory)
  */
 
-namespace ThinFrame\Foundation\Helpers;
+namespace ThinFrame\Foundation\Helper;
 
-use ThinFrame\Foundation\Constants\DataType;
-use ThinFrame\Foundation\Exceptions\InvalidArgumentException;
+use ThinFrame\Foundation\Constant\DataType;
+use ThinFrame\Foundation\Exception\InvalidArgumentException;
 
 /**
  * Class TypeCheck
@@ -33,7 +31,7 @@ final class TypeCheck
         DataType::FLOAT    => 'is_float',
         DataType::RESOURCE => 'is_resource',
         DataType::DOUBLE   => 'is_double',
-        DataType::STRING   => 'ThinFrame\Foundation\Helpers\TypeCheck::isString'
+        DataType::STRING   => 'ThinFrame\Foundation\Helper\TypeCheck::isString'
     ];
 
     /**
@@ -85,8 +83,8 @@ final class TypeCheck
     /**
      * Check value against the provided type
      *
-     * @param mixed  $value
-     * @param string $type
+     * @param mixed  $value value to be checked
+     * @param string $type  value type
      *
      * @return bool
      */
@@ -104,7 +102,7 @@ final class TypeCheck
     /**
      * Check if provided value is a string
      *
-     * @param mixed $string
+     * @param mixed $string string to be checked
      *
      * @return bool
      */

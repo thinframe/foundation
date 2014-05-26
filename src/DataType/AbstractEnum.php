@@ -1,19 +1,17 @@
 <?php
 
 /**
- * /src/ThinFrame/Foundation/DataTypes/AbstractEnum.php
- *
- * @copyright 2013 Sorin Badea <sorin.badea91@gmail.com>
+ * @author    Sorin Badea <sorin.badea91@gmail.com>
  * @license   MIT license (see the license file in the root directory)
  */
 
-namespace ThinFrame\Foundation\DataTypes;
+namespace ThinFrame\Foundation\DataType;
 
 use PhpCollection\Map;
-use ThinFrame\Foundation\Exceptions\InvalidArgumentException;
+use ThinFrame\Foundation\Exception\InvalidArgumentException;
 
 /**
- * Class AbstractEnum
+ * AbstractEnum - emulates the functionality of an enum
  *
  * @package ThinFrame\Foundation\DataTypes
  * @since   0.2
@@ -26,11 +24,11 @@ abstract class AbstractEnum
     private $value;
 
     /**
-     * AbstractEnum()
+     * Constructor
      *
-     * @param $value
+     * @param string|number|bool $value value of the enum
      *
-     * @throws InvalidArgumentException
+     * @throws InvalidArgumentException in case of invalid enum value
      */
     final public function __construct($value)
     {
@@ -40,9 +38,9 @@ abstract class AbstractEnum
     /**
      * Set a new value to the enum instance
      *
-     * @param $value
+     * @param string $value enum value
      *
-     * @throws \ThinFrame\Foundation\Exceptions\InvalidArgumentException
+     * @throws InvalidArgumentException in case of invalid enum value
      */
     final public function setValue($value)
     {
@@ -56,7 +54,7 @@ abstract class AbstractEnum
     /**
      * Check if provided value is a valid constant value
      *
-     * @param $value
+     * @param string $value value to be checked
      *
      * @return bool
      */
@@ -73,6 +71,7 @@ abstract class AbstractEnum
     final public static function getMap()
     {
         $reflector = new \ReflectionClass(get_called_class());
+
         return new Map($reflector->getConstants());
     }
 
@@ -84,6 +83,7 @@ abstract class AbstractEnum
     final public static function type()
     {
         $class = get_called_class();
+
         return function ($value) use ($class) {
             return $class::isValid($value);
         };
@@ -92,7 +92,7 @@ abstract class AbstractEnum
     /**
      * Check if current instance match provided value
      *
-     * @param mixed $value
+     * @param mixed $value value to compare against
      *
      * @return bool
      */

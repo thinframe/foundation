@@ -1,18 +1,16 @@
 <?php
 
 /**
- * /src/ThinFrame/Foundation/Constants/DataType.php
- *
- * @copyright 2013 Sorin Badea <sorin.badea91@gmail.com>
+ * @author    Sorin Badea <sorin.badea91@gmail.com>
  * @license   MIT license (see the license file in the root directory)
  */
 
-namespace ThinFrame\Foundation\Constants;
+namespace ThinFrame\Foundation\Constant;
 
-use ThinFrame\Foundation\DataTypes\AbstractEnum;
+use ThinFrame\Foundation\DataType\AbstractEnum;
 
 /**
- * Class DataType
+ * DataType - list of data types supported by the TypeCheck
  *
  * @package ThinFrame\Foundation\Constants
  * @since   0.2

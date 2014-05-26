@@ -18,8 +18,8 @@ TypeHinting for primary types
 Sample usage:
 
     <?php
-    use ThinFrame\Foundation\Constants\DataType;
-    use ThinFrame\Foundation\Helpers\TypeCheck;
+    use ThinFrame\Foundation\Constant\DataType;
+    use ThinFrame\Foundation\Helper\TypeCheck;
     
     function myAwesomeFunction($stringVariable, \Exception $exception, $boolVariable)
     {
@@ -33,7 +33,7 @@ If any of the function arguments doesn't match the given type, and `InvalidArgum
 Enum implementation for PHP. An enumeration is defined using constants and it also can be instantiated. 
 
     <?php
-    use ThinFrame\Foundation\DataTypes\AbstractEnum;
+    use ThinFrame\Foundation\DataType\AbstractEnum;
     
     class WeekDay extends AbstractEnum
     {
@@ -61,7 +61,10 @@ Enum implementation for PHP. An enumeration is defined using constants and it al
 
 
 ###Installation:
-* via Composer: `"thinframe/foundation":"dev-master"`
+* via Composer: `"thinframe/foundation":"0.3.*"`
 
-###Copyright
-* MIT License - Sorin Badea <sorin.badea91@gmail.com>
+###Contribuitors
+* Sorin Badea <sorin.badea91@gmail.com>
+
+###License
+* MIT
