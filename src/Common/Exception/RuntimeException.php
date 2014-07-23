@@ -5,15 +5,16 @@
  * @license   MIT license (see the license file in the root directory)
  */
 
-namespace ThinFrame\Foundation\Exception;
+namespace ThinFrame\Foundation\Common\Exception;
 
 /**
  * RuntimeException
  *
- * @package ThinFrame\Foundation\Exceptions
- * @since   0.2
+ * Exception thrown if an error which can only be found on runtime occurs.
+ *
+ * @package ThinFrame\Foundation\Common\Exception
  */
 class RuntimeException extends \RuntimeException implements ExceptionInterface
 {
-    //noop
+
 }

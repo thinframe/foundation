@@ -18,11 +18,10 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "phpcollection/phpcollection": "0.3.1",
+        "phpcollection/phpcollection": "0.*",
         "danielstjules/stringy": "1.4.0"
     },
     "require-dev": {
-        "phpspec/phpspec": "2.0.*@dev"
     },
     "minimum-stability": "stable",
     "autoload": {
@@ -32,7 +31,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.3-dev"
+            "dev-v0.4": "0.4-dev"
         }
     }
 }

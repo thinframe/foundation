@@ -5,15 +5,14 @@
  * @license   MIT license (see the license file in the root directory)
  */
 
-namespace ThinFrame\Foundation\Exception;
+namespace ThinFrame\Foundation\Common\Exception;
 
 /**
- * Base exception for ThinFrame packages
+ * Exception
  *
- * @package ThinFrame\Foundation\Exceptions
- * @since   0.2
+ * @package ThinFrame\Foundation\Common\Exception
  */
 class Exception extends \Exception implements ExceptionInterface
 {
-    //noop
+
 }

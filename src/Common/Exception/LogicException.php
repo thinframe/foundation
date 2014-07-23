@@ -5,15 +5,17 @@
  * @license   MIT license (see the license file in the root directory)
  */
 
-namespace ThinFrame\Foundation\Exception;
+namespace ThinFrame\Foundation\Common\Exception;
 
 /**
  * LogicException
  *
- * @package ThinFrame\Foundation\Exceptions
- * @since   0.2
+ * Exception that represents error in the program logic.
+ * This kind of exception should lead directly to a fix in your code.
+ *
+ * @package ThinFrame\Foundation\Common\Exception
  */
 class LogicException extends \LogicException implements ExceptionInterface
 {
-    //noop
+
 }
